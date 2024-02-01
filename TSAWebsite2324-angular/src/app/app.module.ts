@@ -10,6 +10,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { MembershipComponent } from './membership/membership.component';
+import { ReferencesComponent } from './references/references.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MembershipComponent } from './membership/membership.component';
       { path: 'calendar', component: CalendarComponent, pathMatch: 'full' },
       { path: 'membership', component: MembershipComponent, pathMatch: 'full' },
       { path: 'reservation', component: ReservationComponent, pathMatch: 'full' },
+      { path: 'references', component: ReferencesComponent, pathMatch: 'full' },
     ])
   ],
   providers: [],
