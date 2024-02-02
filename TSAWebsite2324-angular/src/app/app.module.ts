@@ -11,6 +11,8 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { MembershipComponent } from './membership/membership.component';
 import { ReferencesComponent } from './references/references.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReservationPageComponent } from './reservation-page/reservation-page.component';
 
 
 @NgModule({
@@ -21,9 +23,11 @@ import { ReferencesComponent } from './references/references.component';
     AboutUsComponent,
     CalendarComponent,
     ReservationComponent,
+    ReservationPageComponent,
     MembershipComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
@@ -33,6 +37,7 @@ import { ReferencesComponent } from './references/references.component';
       { path: 'membership', component: MembershipComponent, pathMatch: 'full' },
       { path: 'reservation', component: ReservationComponent, pathMatch: 'full' },
       { path: 'references', component: ReferencesComponent, pathMatch: 'full' },
+      { path: 'reservation-received', component: ReservationPageComponent, pathMatch: 'full' }
     ])
   ],
   providers: [],
