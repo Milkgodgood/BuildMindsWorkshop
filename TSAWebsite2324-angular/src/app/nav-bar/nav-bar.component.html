@@ -1,28 +1,1 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">BuildMinds Workshop</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item" routerLinkActive="['link-active']">
-        <a class="nav-link" [routerLink]="['/']">Home</a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['link-active']">
-        <a class="nav-link" [routerLink]="['/about-us']">About Us</a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['link-active']">
-        <a class="nav-link" [routerLink]="['/calendar']">Calendar</a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['link-active']">
-        <a class="nav-link" [routerLink]="['/membership']">Membership</a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['link-active']">
-        <a class="nav-link" [routerLink]="['/reservation']">Reservation</a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['link-active']">
-        <a class="nav-link" [routerLink]="['/references']">References</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<header>  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">    <div class="container">      <a class="navbar-brand" [routerLink]="['/']">BuildMinds Workshop</a>      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation" [attr.aria-expanded]="isExpanded" (click)="toggle()">        <span class="navbar-toggler-icon"></span>      </button>      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" [ngClass]="{ show: isExpanded }">        <ul class="navbar-nav flex-grow">          <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>          </li>          <li class="nav-item" [routerLinkActive]="['link-active']">            <a class="nav-link" [routerLink]="['/about-us']">About Us</a>          </li>          <li class="nav-item" [routerLinkActive]="['link-active']">            <a class="nav-link" [routerLink]="['/calendar']">Calendar</a>          </li>          <li class="nav-item" [routerLinkActive]="['link-active']">            <a class="nav-link" [routerLink]="['/membership']">Membership</a>          </li>          <li class="nav-item" [routerLinkActive]="['link-active']">            <a class="nav-link" [routerLink]="['/reservation']">Reservation</a>          </li>          <li class="nav-item" [routerLinkActive]="['link-active']">            <a class="nav-link" [routerLink]="['/references']">References</a>          </li>        </ul>      </div>    </div>  </nav></header>
