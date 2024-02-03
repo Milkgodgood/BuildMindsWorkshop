@@ -1,113 +1,181 @@
 <h1 style="text-align:center; font-size:60px"><ins>Membership Information</ins></h1>
+
 <table class="table table-striped">
+
   <thead>
+
     <tr class="table-primary">
+
       <th scope="col">Benefits</th>
+
       <th scope="col">Non-Member</th>
+
       <th scope="col">Member</th>
+
       <th scope="col">Mind-Member</th>
+
     </tr>
+
   </thead>
+
   <tbody class="table-group-divider">
+
     <tr>
+
       <th scope="row">Normal Hours</th>
+
       <td>X</td>
+
       <td>X</td>
+
       <td>X</td>
+
     </tr>
+
     <tr class="table-primary">
+
       <th scope="row">Extended Hours</th>
+
       <td></td>
+
       <td>X</td>
+
       <td>X</td>
+
     </tr>
+
     <tr>
+
       <th scope="row">Access to Events</th>
+
       <td></td>
+
       <td>X</td>
+
       <td>X</td>
+
     </tr>
+
     <tr class="table-primary">
+
       <th scope="row">Reduced Reservation Costs</th>
+
       <td></td>
+
       <td></td>
+
       <td>X</td>
+
     </tr>
+
     <tr>
+
       <th scope="row">Access to Community Projects</th>
+
       <td></td>
+
       <td></td>
+
       <td>X</td>
+
     </tr>
+
     <tr class="table-primary">
+
       <th scope="row">Cost</th>
+
       <td>Free</td>
+
       <td>10$/month</td>
+
       <td>30$/month</td>
+
     </tr>
+
   </tbody>
+
 </table>
 
 
 
-<div class="row">
-  <div class="col-md-6">
-    <div class="card">
-      <h5 class="card-header">Request a Reservation</h5>
-      <div class="card-body">
-        <h5 class="card-title">We're thrilled to share our space with you.</h5>
-        <p class="card-text">Please fill out the form to request a reservation.</p>
 
-        <form [formGroup]="reservationFormGroup">
+
+
+
+<div class="row">
+
+  <div class="col-md-6">
+
+    <div class="card">
+
+      <h5 class="card-header">Start a Membership</h5>
+
+      <div class="card-body">
+
+        <h5 class="card-title">We're thrilled for you to be our next member.</h5>
+
+        <p class="card-text">Please fill out the form to start your membership.</p>
+
+
+
+        <form [formGroup]="membershipFormGroup">
+
           <div class="row">
             <div class="col-12">
               <!--EMAIL ADDRESS-->
               <div class="form-group">
                 <label for="emailAddress">Email Address</label>
                 <input type="email" class="form-control" id="emailAddress" aria-describedby="emailAddressHelp" name="emailAddress" formControlName="emailAddress" />
-                <div *ngIf="reservationFormGroup.get('emailAddress')!.hasError('required') && reservationFormGroup.get('emailAddress')!.touched" class="text-danger">
+                <div *ngIf="membershipFormGroup.get('emailAddress')!.hasError('required') && membershipFormGroup.get('emailAddress')!.touched" class="text-danger">
                   Email Address is required.
                 </div>
-                <div *ngIf="reservationFormGroup.get('emailAddress')!.hasError('email') && reservationFormGroup.get('emailAddress')!.touched" class="text-danger">
+                <div *ngIf="membershipFormGroup.get('emailAddress')!.hasError('email') && membershipFormGroup.get('emailAddress')!.touched" class="text-danger">
                   Email Address is invalid.
                 </div>
               </div>
             </div>
           </div>
+
+
           <div class="row">
-            <div class="col-md-3">
-              <label for="reservationDate">Reservation Date</label>
-              <input type="date" class="form-control form-control-sm" id="reservationDate" aria-describedby="reservationDateHelp" placeholder="Reservation Date" formControlName="reservationDate" name="reservationDate" />
-              <div *ngIf="reservationFormGroup.get('reservationDate')!.hasError('required') && reservationFormGroup.get('reservationDate')!.touched" class="text-danger">
-                Reservation Date is required.
+            <div class="col-12">
+              <!--FIRST NAME-->
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" aria-describedby="firstNameHelp" name="firstName" formControlName="firstName" />
+                <div *ngIf="membershipFormGroup.get('firstName')!.hasError('required') && membershipFormGroup.get('firstName')!.touched" class="text-danger">
+                  First Name is required.
+                </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <!--REVERSATION TIME-->
-              <div class="form-group">
-                <label for="reservationTime">Reservation Time</label>
-                <select class="form-select form-select-sm" aria-label="Time Selection" formControlName="timeSlot">
-                  <option></option>
-                  <option>6:00 AM</option>
-                  <option>7:00 AM</option>
-                  <option>8:00 AM</option>
-                  <option>9:00 AM</option>
-                  <option>10:00 AM</option>
-                  <option>11:00 AM</option>
-                  <option>12:00 PM</option>
-                  <option>1:00 PM</option>
-                  <option>2:00 PM</option>
-                  <option>3:00 PM</option>
-                  <option>4:00 PM</option>
-                  <option>5:00 PM</option>
-                  <option>6:00 PM</option>
-                  <option>7:00 PM</option>
-                  <option>8:00 PM</option>
-                </select>
+          </div>
 
-                <div *ngIf="reservationFormGroup.get('timeSlot')!.hasError('required') && reservationFormGroup.get('timeSlot')!.touched" class="text-danger">
-                  Reservation Time is required.
+          <div class="row">
+            <div class="col-12">
+              <!--LAST NAME-->
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" aria-describedby="lastNameHelp" name="lastName" formControlName="lastName" />
+                <div *ngIf="membershipFormGroup.get('lastName')!.hasError('required') && membershipFormGroup.get('lastName')!.touched" class="text-danger">
+                  Last Name is required.
                 </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-3">
+            <!--MEMBERSHIP TYPE-->
+            <div class="form-group">
+              <label for="membershipType">Membership Type</label>
+              <select class="form-select form-select-sm" aria-label="Membership Type" formControlName="membershipType">
+                <option></option>
+                <option>Member ($10/Month)</option>
+                <option>Mind-Member ($30/Month)</option>
+              </select>
+
+              <div *ngIf="membershipFormGroup.get('membershipType')!.hasError('required') && membershipFormGroup.get('membershipType')!.touched" class="text-danger">
+                Membership Type is required.
               </div>
             </div>
           </div>
@@ -116,18 +184,34 @@
 
           <br />
 
+
+
           <!--SUBMIT-->
+
           <div class="row">
+
             <div class="col-3">
+
               <button class="btn-primary btn" (click)="submitReservation()">Submit</button>
+
             </div>
+
           </div>
 
+
+
         </form>
-      </div>
+
     </div>
+
   </div>
-  <div class="col-md-6">
-    <img src="assets/images/picture for website3.jpg" style="width: 100%"/>
-  </div>
+
+</div>
+
+<div class="col-md-6">
+
+  <img src="assets/images/picture for website3.jpg" style="width: 100%" />
+
+</div>
+
 </div>

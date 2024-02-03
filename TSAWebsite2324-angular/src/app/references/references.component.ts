@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-references',
@@ -7,4 +8,19 @@ import { Component } from '@angular/core';
 })
 export class ReferencesComponent {
 
+  constructor(private router: Router) {
+
+  }
+
+  goToCopyright() {
+    this.router.navigate(['/copyright']);
+  }
+
+  goToWorklog() {
+    this.router.navigate(['/worklog']);
+  }
+
+  goToDocumentation() {
+    this.router.navigate(['/documentation']);
+  }
 }

@@ -8,24 +8,22 @@ import { Router } from '@angular/router';
   styleUrl: './membership.component.css'
 })
 export class MembershipComponent {
-
-  daysArray: number[] = Array.from({ length: 31 }, (_, i) => i + 1);
-
-  reservationFormGroup: FormGroup;
+  membershipFormGroup: FormGroup;
 
   constructor(private fb: FormBuilder, private router: Router) {
 
-    this.reservationFormGroup = this.fb.group({
+    this.membershipFormGroup = this.fb.group({
       emailAddress: ['', [Validators.required, Validators.email]],
-      reservationDate: ['', [Validators.required]],
-      timeSlot: ['', [Validators.required]]
+      firstName: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      membershipType: ['', [Validators.required]]
     });
 
   }
 
   submitReservation() {
-    if (this.reservationFormGroup.valid) {
-      this.router.navigate(['/reservation-received']);
+    if (this.membershipFormGroup.valid) {
+      this.router.navigate(['/membership-received']);
     }
 
     

@@ -17,3 +17,4 @@ export class NavBarComponent {
     this.isExpanded = !this.isExpanded;
   }
 }
+

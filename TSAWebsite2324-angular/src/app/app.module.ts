@@ -13,6 +13,10 @@ import { MembershipComponent } from './membership/membership.component';
 import { ReferencesComponent } from './references/references.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReservationPageComponent } from './reservation-page/reservation-page.component';
+import { PlanWorklogComponent } from './plan-worklog/plan-worklog.component';
+import { DocumentationComponent } from './documentation/documentation.component';
+import { CopyrightPageComponent } from './copyright-page/copyright-page.component';
+import { MembershipReceivedComponent } from './membership-received/membership-received.component';
 
 
 @NgModule({
@@ -24,7 +28,10 @@ import { ReservationPageComponent } from './reservation-page/reservation-page.co
     CalendarComponent,
     ReservationComponent,
     ReservationPageComponent,
-    MembershipComponent
+    MembershipComponent,
+    PlanWorklogComponent,
+    DocumentationComponent,
+    MembershipReceivedComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -37,7 +44,11 @@ import { ReservationPageComponent } from './reservation-page/reservation-page.co
       { path: 'membership', component: MembershipComponent, pathMatch: 'full' },
       { path: 'reservation', component: ReservationComponent, pathMatch: 'full' },
       { path: 'references', component: ReferencesComponent, pathMatch: 'full' },
-      { path: 'reservation-received', component: ReservationPageComponent, pathMatch: 'full' }
+      { path: 'reservation-received', component: ReservationPageComponent, pathMatch: 'full' },
+      { path: 'copyright', component: CopyrightPageComponent, pathMatch: 'full' },
+      { path: 'worklog', component: PlanWorklogComponent, pathMatch: 'full' },
+      { path: 'documentation', component: DocumentationComponent, pathMatch: 'full' },
+      { path: 'membership-received', component: MembershipReceivedComponent, pathMatch: 'full' }
     ])
   ],
   providers: [],
